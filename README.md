@@ -42,6 +42,32 @@ bin/rails db:migrate
 ### Run Test Case
   `rails test`
 
+### Deploy application in to Heroku
+
+Commit all files
+```
+git add .
+git commit -m "Initial commit"
+```
+
+Add this in Gemlock if your in Mac:
+`bundle lock --add-platform x86_64-linux`
+`bundle install`
+
+Login to heroku and create app and push it.
+
+```
+  heroku login
+  heroku create
+  git push heroku main
+  heroku run rake db:migrate
+```
+
+Add Redis in to heroku as add ons.
+
+`heroku addons:create heroku-redis:hobby-dev -a <APP Name>`
+
+
 #### Exceptions during installations and fixes
 
 Could not open library 'libvips.42.dylib': dlopen(libvips.42.dylib, 0x0005):
