@@ -63,11 +63,11 @@ Login to heroku and create app and push it.
   heroku run rake db:migrate
 ```
 
-Add Redis in to heroku as add ons.
+Add Redis in to heroku as add ons. app name: mysterious-atoll-78266
 
-`heroku addons:create heroku-redis:hobby-dev -a <APP Name>`
+`heroku addons:create heroku-redis:hobby-dev -a mysterious-atoll-78266`
 
-
+Access: https://mysterious-atoll-78266.herokuapp.com/
 #### Exceptions during installations and fixes
 
 Could not open library 'libvips.42.dylib': dlopen(libvips.42.dylib, 0x0005):
