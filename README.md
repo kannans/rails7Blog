@@ -68,6 +68,15 @@ Add Redis in to heroku as add ons. app name: mysterious-atoll-78266
 `heroku addons:create heroku-redis:hobby-dev -a mysterious-atoll-78266`
 
 Access: https://mysterious-atoll-78266.herokuapp.com/
+
+
+#### Email setup: Using gmail smtp:
+Enable Less Secure app On.
+https://myaccount.google.com/lesssecureapps
+
+Configuration.
+https://github.com/kannans/rails7Blog/blob/main/config/environments/development.rb#L74
+
 #### Exceptions during installations and fixes
 
 Could not open library 'libvips.42.dylib': dlopen(libvips.42.dylib, 0x0005):
