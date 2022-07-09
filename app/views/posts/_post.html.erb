@@ -1,17 +1,36 @@
-<div id="<%= dom_id post %>">
-  <p>
-    <strong>Title:</strong>
-    <%= post.title %>
-  </p>
-  <%= pluralize post.comments.count, "comment"%>
-  <p>
-    <strong>Created at:</strong>
-    <%= time_tag post.created_at, "data-local": "time-ago"  %>
-  </p>
 
-  <p>
-    <strong>Content:</strong>
-    <%= post.content %>
-  </p>
+  <!-- Page Header-->
+  <header class="masthead" style="background-image: url('assets/img/post-bg.jpg')">
+      <div class="container position-relative px-4 px-lg-5">
+          <div class="row gx-4 gx-lg-5 justify-content-center">
+              <div class="col-md-10 col-lg-8 col-xl-7">
+                  <div class="post-heading">
+                      <h1><%= post.title %></h1>
+                      <h2 class="subheading">...</h2>
+                      <span class="meta">
+                          Posted by
+                          <a href="#!">Kannan</a>
+                            <%= time_tag post.created_at, "data-local": "time-ago"  %>
+                      </span>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </header>
+  <!-- Post Content-->
 
-</div>
+  <article class="mb-4" id="<%= dom_id post %>">
+      <div class="container px-4 px-lg-5">
+          <div class="row gx-4 gx-lg-5 justify-content-center">
+              <div class="col-md-10 col-lg-8 col-xl-7">
+                  <%= post.content %>
+              </div>
+
+              <div class="col-md-10 col-lg-8 col-xl-7">
+                <%= pluralize post.comments.count, "comment"%>
+                  <%= time_tag post.created_at, "data-local": "time-ago"  %>
+              </div>
+          </div>
+      </div>
+  </article>
+  
