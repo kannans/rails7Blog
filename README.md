@@ -82,3 +82,29 @@ https://github.com/kannans/rails7Blog/blob/main/config/environments/development.
 Could not open library 'libvips.42.dylib': dlopen(libvips.42.dylib, 0x0005):
 
 `brew install vips `
+
+
+#### Add bootstrap 5 to rails 7
+
+`./bin/importmap pin bootstrap `
+
+Add Gem
+`gem 'bootstrap', '~> 5.1.3'`
+
+import css
+```
+// app/assets/stylesheets/application.scss
+@import "bootstrap";
+```
+
+import js at applications js.
+
+```
+import * as bootstrap from 'bootstrap'
+import "@popperjs/core"
+```
+
+Also we need to set node environments.
+```
+<script>window.process = { env: { NODE_ENV: "#{Rails.env}" } }</script>
+```
